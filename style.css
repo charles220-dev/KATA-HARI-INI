@@ -1,0 +1,34 @@
+/* Container untuk membatasi area teks berjalan */
+.marquee-container {
+    width: 100%;
+    overflow: hidden; /* Sembunyikan teks yang keluar dari container */
+    white-space: nowrap; /* Pastikan teks tetap dalam satu baris */
+    background-color: #e6f1ef;
+    padding: 100px 0;
+}
+
+/* Gaya untuk teks berjalan */
+.scrolling-text {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 650px;
+    animation: scroll-left 15s linear infinite; /* Jalankan animasi */
+}
+
+/* Keyframes untuk mendefinisikan pergerakan */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(15%); /* Mulai dari luar layar sebelah kanan */
+        color: #ff0000; /* Merah */
+    }
+    33% {
+        color: rgb(1, 1, 10)e3; /* Hijau */
+    }
+    66% {
+        color: #0000ff; /* Biru */
+    }
+    100% {
+        transform: translateX(-100%); /* Selesai di luar layar sebelah kiri */
+        color: #ff0000; /* Kembali ke merah */
+    }
+}
